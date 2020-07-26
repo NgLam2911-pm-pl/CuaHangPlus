@@ -1,0 +1,129 @@
+"1":
+  support:
+    money: "true"
+    point: "false"
+  price:
+    money: 10000
+    point: 0 
+  Item:
+    Id: "278:0:1"
+    Name: "§l§3❋§5CúpI"
+    Lore: "§l§3Đơn giản chỉ là cúp❋"
+    Enchantments:
+        1:
+            Id: "efficiency"
+            Level: 2
+        2:  
+            Id: "unbreaking"
+            Level: 5
+  Content: " §l§3❋§5CúpI : 10000$"
+"2":
+  support:
+    money: "true"
+    point: "false"
+  price:
+    money: 50000
+    point: 0 
+  Item:
+    Id: "278:0:1"
+    Name: "§l§3❋§5CúpII❋"
+    Lore: "§l§3❋§5Vật Phẩm Đắc Tiền❋"
+    Enchantments:
+        1:
+            Id: 17
+            Level: 5
+        2:   
+            Id: 15
+            Level: 5
+  Content: "§l§3❋§5CúpII❋ : 50000$"
+"3":
+  support:
+    money: "true"
+    point: "false"
+  price:
+    money: 150000
+    point: 0 
+  Item:
+    Id: "278:0:1"
+    Name: "§l§3❋§5CúpIII❋"
+    Lore: "§l§3❋§5Vật Phẩm Đắc Tiền❋"
+    Enchantments:
+        1:
+            Id: 17
+            Level: 5
+        2:   
+            Id: 15
+            Level: 8
+        3:  
+            Id: "fortune"
+            Level: 3
+  Content: "§l§3❋§5CúpIII❋ : 150000$"
+"4":
+  support:
+    money: "true"
+    point: "false"
+  price:
+    money: 300000
+    point: 0 
+  Item:
+    Id: "278:0:1"
+    Name: "§l§3❋§5CúpIV❋"
+    Lore: "§l§3❋§5Vật Phẩm Đắc Tiền❋"
+    Enchantments:
+        1:
+            Id: 17
+            Level: 5
+        2:   
+            Id: 15
+            Level: 10
+        3:  
+            Id: "fortune"
+            Level: 5
+  Content: "§l§3❋§5CúpIV❋ : 300000$"
+"5":
+  support:
+    money: "true"
+    point: "false"
+  price:
+    money: 1000000
+    point: 0 
+  Item:
+    Id: "278:0:1"
+    Name: "§l§3❋§5CúpLPK❋"
+    Lore: "§l§eNgười làm mod CuaHangUI❋"
+    Enchantments:
+        1:
+            Id: 17
+            Level: 5
+        2:   
+            Id: 15
+            Level: 15
+        3: 
+            Id: "fortune"
+            Level: 7
+  Content: "§l§3❋§5CúpLPK❋ : 1000000$"
+"6":
+  support:
+    money: "true"
+    point: "false"
+  price:
+    money: 10000000
+    point: 0 
+  Item:
+    Id: "278:0:1"
+    Name: "§l§3❋§5CúpPPW❋"
+    Lore: "§l§e Cúp hiếm ,tránh làm mất"
+    Enchantments:
+        1:
+            Id: 17
+            Level: 15
+        2:   
+            Id: 15
+            Level: 30
+        3: 
+            Id: "fortune"
+            Level: 15
+        4:
+            Id: "haste"
+            Level: 2
+  Content: "§l§3❋§5CúpPPW❋ : 10000000$"
