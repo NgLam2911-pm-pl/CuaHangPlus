@@ -28,6 +28,9 @@ use onebone\pointapi\PointAPI;
 
 use muqsit\invmenu\InvMenu;
 use muqsit\invmenu\InvMenuHandler;
+use muqsit\invmenu\transaction\DeterministicInvMenuTransaction;
+
+use Closure;
 
 use DaPigGuy\PiggyCustomEnchants\CustomEnchantManager;
 
@@ -143,9 +146,8 @@ class CuaHang extends PluginBase implements Listener
 	public function openForm(Player $player)
 	{
 		$menu = InvMenu::create(InvMenu::TYPE_DOUBLE_CHEST);
-		$menu->readOnly();
 		$menu->setName($this->getStg()["shop-name"]);
-		$menu->setListener([$this, "MenuListener"]);
+		$menu->setListener(InvMenu::readonly(Closure::fromCallable([$this, "MenuListener"])));
 		$menuinv = $menu->getInventory();
 		
 		foreach (array_keys($this->getShop()) as $id)
@@ -185,12 +187,20 @@ class CuaHang extends PluginBase implements Listener
      * @param SlotChangeAction $action
      * @return bool
      */
-	public function MenuListener (Player $player, Item $itemClicked, Item $itemClickedWith, SlotChangeAction $action): bool
+	public function MenuListener (DeterministicInvMenuTransaction $transaction): void
 	{
+        $player = $transaction->getPlayer();
+        $itemClicked = $transaction->getItemClicked();
+        $itemClickedWith = $transaction->getItemClickedWith();
+        $action = $transaction->getAction();
+        $invTransaction = $transaction->getTransaction();
+
 		$id= $action->getSlot();
 		$player->removeWindow($action->getInventory());
-		$this->buyItem($id+1, $player, $itemClicked);
-		return true;
+		$transaction->then(function (Player $player) use ($id, $itemClicked)
+        {
+            $this->buyItem($id+1, $player, $itemClicked);
+        });
 	}
 
     /**
